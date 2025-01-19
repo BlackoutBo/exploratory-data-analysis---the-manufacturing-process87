@@ -1,3 +1,3 @@
 import pandas as pd
-failure_data = pd.read_csv("failure_data.csv")
-print(failure_data.describe())
+tfd = pd.read_csv("transformed_failure_data.csv")
+print(tfd.head())
