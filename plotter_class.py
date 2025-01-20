@@ -70,8 +70,13 @@ class Plotter:
 
     def plot_outliers(self):
         """
-        Plot box plots to visualize outliers for all numeric columns in the DataFrame.
+        The function `plot_outliers` identifies and visualizes outliers in numeric columns of a
+        DataFrame using box plots.
+        :return: The `plot_outliers` method returns a box plot for each numeric column in the DataFrame
+        to visualize the outliers present in the data. If there are no numeric columns in the DataFrame,
+        it prints "No numeric columns to plot outliers." and returns without plotting anything.
         """
+       
         numeric_cols = self.df.select_dtypes(include=['float64', 'int64'])
         if numeric_cols.empty:
             print("No numeric columns to plot outliers.")
@@ -85,7 +90,7 @@ class Plotter:
             plt.show()
 
 
-# Example: Loading a DataFrame (replace with your actual data file or DataFrame)
+#Loading DataFrame 
 df = pd.read_csv("cleaned_dataset.csv")
 
 # Create an instance of Plotter
